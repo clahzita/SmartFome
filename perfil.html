@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="style.css" type="text/css"> </head>
+  <link rel="stylesheet" href="perfil.css" type="text/css"> </head>
 
 <body>
   <nav class="navbar navbar-expand-md bg-primary navbar-dark">
@@ -22,34 +23,86 @@
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i>Sobre nós</a>
           </li>
+          <li class="nav-item">
+            <div class="dropdown show">
+              <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Meu Perfil
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Editar</a>
+                <a class="dropdown-item" href="index.html">Sair</a>
+              </div>
+            </div>
+          </li>
         </ul>
-        <a class="btn navbar-btn ml-2 text-white btn-secondary" href="login.html"><i class="fa d-inline fa-lg fa-user-circle-o"></i> Cadestre-se ou Entre</a>
       </div>
     </div>
   </nav>
+  <!-- extraido e adaptado do site BootSnipp, user @keenthemes: https://bootsnipp.com/snippets/featured/user-profile-sidebar-->
+  <!--conteudo-->
   <div class="opaque-overlay py-5">
-    <div class="container py-5">
+    <div class="container profile">
       <div class="row">
+  <!--coluna lado esquerdo-->
         <div class="col-md-3">
-          <img class="img-fluid d-block mx-auto mb-5" src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hamburger_PNG_Vector_Clipart.png?m=1434268872">
+          <div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="https://openclipart.org/image/2400px/svg_to_png/211821/matt-icons_preferences-desktop-personal.png" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						Marcus Doe
+					</div>
+					<div class="profile-usertitle-job">
+						Developer
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">Message</button>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							Account Settings </a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-ok"></i>
+							Tasks </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
         </div>
-        <div class="col-md-9 text-white align-self-center">
-          <h1 class="display-3 mb-4"><b class="">Mate a sua fome com inteligência!</b></h1>
-          <p class="lead mb-5">Encontre aqui a opção que você deseja.
-            <br> </p>
-        </div>
+        <!--coluna lado edireito-->
+        <div class="col-md-9"></div>
       </div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-9">
-          <form class="form-inline" method="post" action="">
-            <input type="search" name="search" class="form-control" placeholder="Digite a comida">
-            <button type="search" class="btn btn-primary">Buscar</button>
-          </form>
-        </div>
-      </div>
+      
     </div>
   </div>
+  <!--fim do conteudo-->
+  
   <div class="bg-dark text-white">
     <div class="container">
       <div class="row">
