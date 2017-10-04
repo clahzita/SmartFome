@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="style.css" type="text/css"> </head>
-  <link rel="stylesheet" href="perfil.css" type="text/css"> </head>
+  <link rel="stylesheet" href="css/style.css" type="text/css"> </head>
+  <link rel="stylesheet" href="css/perfil.css" type="text/css"> </head>
 
 <body>
   <nav class="navbar navbar-expand-md bg-primary navbar-dark">
@@ -41,7 +41,7 @@
   <!-- extraido e adaptado do site BootSnipp, user @keenthemes: https://bootsnipp.com/snippets/featured/user-profile-sidebar-->
   <!--conteudo-->
   <div class="opaque-overlay py-5">
-    <div class="container profile">
+    <div class="container profile center-all">
       <div class="row">
   <!--coluna lado esquerdo-->
         <div class="col-md-3">
@@ -54,17 +54,17 @@
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-						Marcus Doe
+						Zezinho Lanches
 					</div>
-					<div class="profile-usertitle-job">
-						Developer
+					<div class="profile-usertitle-category">
+						Carrinho de Comida
 					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-success btn-sm">Follow</button>
-					<button type="button" class="btn btn-danger btn-sm">Message</button>
+					<button type="button" class="btn btn-primary btn-sm">Follow</button>
+					<button type="button" class="btn btn-secondary btn-sm">Message</button>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
@@ -96,7 +96,21 @@
 			</div>
         </div>
         <!--coluna lado edireito-->
-        <div class="col-md-9"></div>
+        <div class="col-md-9">
+            <div class="profile-content">
+  			      <form action="/contact/" method="POST">
+                <p><label for="id_subject">Subject:</label>
+                    <input id="id_subject" type="text" name="subject" maxlength="100" /></p>
+                <p><label for="id_message">Message:</label>
+                    <input type="text" name="message" id="id_message" /></p>
+                <p><label for="id_sender">Sender:</label>
+                    <input type="text" name="sender" id="id_sender" /></p>
+                <p><label for="id_cc_myself">Cc myself:</label>
+                    <input type="checkbox" name="cc_myself" id="id_cc_myself" /></p>
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+	      	</div>
       </div>
       
     </div>

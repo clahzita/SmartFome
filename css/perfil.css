@@ -3,14 +3,15 @@ User Profile Sidebar by @keenthemes
 A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
 Licensed under MIT
 ***/
-
-body {
-  background: #F1F3FA;
+.center-all{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 /* Profile container */
 .profile {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 /* Profile sidebar */
@@ -20,6 +21,7 @@ body {
 }
 
 .profile-userpic img {
+  display: block;
   float: none;
   margin: 0 auto;
   width: 50%;
@@ -27,6 +29,7 @@ body {
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
   border-radius: 50% !important;
+  
 }
 
 .profile-usertitle {
@@ -41,7 +44,7 @@ body {
   margin-bottom: 7px;
 }
 
-.profile-usertitle-job {
+.profile-usertitle-category {
   text-transform: uppercase;
   color: #5b9bd1;
   font-size: 12px;
