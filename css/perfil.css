@@ -68,44 +68,42 @@ Licensed under MIT
 .profile-userbuttons .btn:last-child {
   margin-right: 0px;
 }
-    
-.profile-usermenu {
-  margin-top: 30px;
+
+ #map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+   padding: 20px 0 10px 0;
+  
+ }
+ 
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
 }
 
-.profile-usermenu ul li {
-  border-bottom: 1px solid #f0f4f7;
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
 }
 
-.profile-usermenu ul li:last-child {
-  border-bottom: none;
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
 }
 
-.profile-usermenu ul li a {
-  color: #93a3b5;
-  font-size: 14px;
-  font-weight: 400;
+/* change border radius for the tab , apply corners on top*/
+#profile-tab .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
 }
 
-.profile-usermenu ul li a i {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-.profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
-}
-
-.profile-usermenu ul li.active {
-  border-bottom: none;
-}
-
-.profile-usermenu ul li.active a {
-  color: #5b9bd1;
-  background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
-  margin-left: -2px;
+#profile-tab .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
 }
 
 /* Profile Content */
@@ -114,3 +112,5 @@ Licensed under MIT
   background: #fff;
   min-height: 460px;
 }
+
+

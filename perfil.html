@@ -4,17 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/perfil.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css"> </head>
-  <link rel="stylesheet" href="css/perfil.css" type="text/css"> </head>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  
+</head>
 
 <body>
+<!-- INICIO - Header Login Ativo -->
   <nav class="navbar navbar-expand-md bg-primary navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hamburger_PNG_Vector_Clipart.png?m=1434268872" width="30" height="30" class="d-inline-block align-top" alt=""><b>SmartFome</b></a>
+        <img src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hamburger_PNG_Vector_Clipart.png?m=1434268872" width="30" height="30" class="d-inline-block align-top" alt=""><b>SmartFome</b>
+      </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span> </button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
@@ -25,98 +30,91 @@
           </li>
           <li class="nav-item">
             <div class="dropdown show">
-              <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Meu Perfil
-              </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Editar</a>
-                <a class="dropdown-item" href="index.html">Sair</a>
-              </div>
+              <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Editar</a>
+                  <a class="dropdown-item" href="index.html">Sair</a>
+                </div>
             </div>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- extraido e adaptado do site BootSnipp, user @keenthemes: https://bootsnipp.com/snippets/featured/user-profile-sidebar-->
-  <!--conteudo-->
-  <div class="opaque-overlay py-5">
-    <div class="container profile center-all">
-      <div class="row">
-  <!--coluna lado esquerdo-->
-        <div class="col-md-3">
+  <!-- FIM - Header Login Ativo -->
+
+  <!-- INICIO - Content -->
+  <div class="opaque-overlay">
+    <div class="container">
+        <div class="row profile">
+        <div class="col-md-4">          
+          <!-- SIDEBAR -->
           <div class="profile-sidebar">
-				<!-- SIDEBAR USERPIC -->
-				<div class="profile-userpic">
-					<img src="https://openclipart.org/image/2400px/svg_to_png/211821/matt-icons_preferences-desktop-personal.png" class="img-responsive" alt="">
-				</div>
-				<!-- END SIDEBAR USERPIC -->
-				<!-- SIDEBAR USER TITLE -->
-				<div class="profile-usertitle">
-					<div class="profile-usertitle-name">
-						Zezinho Lanches
-					</div>
-					<div class="profile-usertitle-category">
-						Carrinho de Comida
-					</div>
-				</div>
-				<!-- END SIDEBAR USER TITLE -->
-				<!-- SIDEBAR BUTTONS -->
-				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-primary btn-sm">Follow</button>
-					<button type="button" class="btn btn-secondary btn-sm">Message</button>
-				</div>
-				<!-- END SIDEBAR BUTTONS -->
-				<!-- SIDEBAR MENU -->
-				<div class="profile-usermenu">
-					<ul class="nav">
-						<li class="active">
-							<a href="#">
-							<i class="glyphicon glyphicon-home"></i>
-							Overview </a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-user"></i>
-							Account Settings </a>
-						</li>
-						<li>
-							<a href="#" target="_blank">
-							<i class="glyphicon glyphicon-ok"></i>
-							Tasks </a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-flag"></i>
-							Help </a>
-						</li>
-					</ul>
-				</div>
-				<!-- END MENU -->
-			</div>
-        </div>
-        <!--coluna lado edireito-->
-        <div class="col-md-9">
-            <div class="profile-content">
-  			      <form action="/contact/" method="POST">
-                <p><label for="id_subject">Subject:</label>
-                    <input id="id_subject" type="text" name="subject" maxlength="100" /></p>
-                <p><label for="id_message">Message:</label>
-                    <input type="text" name="message" id="id_message" /></p>
-                <p><label for="id_sender">Sender:</label>
-                    <input type="text" name="sender" id="id_sender" /></p>
-                <p><label for="id_cc_myself">Cc myself:</label>
-                    <input type="checkbox" name="cc_myself" id="id_cc_myself" /></p>
-                <input type="submit" value="Submit" />
-              </form>
+            <!-- SIDEBAR USERPIC -->
+            <div class="profile-userpic">
+            <img src="https://openclipart.org/image/2400px/svg_to_png/211821/matt-icons_preferences-desktop-personal.png" class="img-responsive" alt="">
             </div>
-	      	</div>
+            <!-- END SIDEBAR USERPIC -->
+            <!-- SIDEBAR USER TITLE -->
+            <div class="profile-usertitle">
+              <div class="profile-usertitle-name">
+                Zezinho Lanches
+              </div>
+              <div class="profile-usertitle-category">
+                Carrinho de Comida
+              </div>
+            </div>
+            <!-- END SIDEBAR USER TITLE -->
+            <!-- SIDEBAR BUTTONS -->
+            <div class="profile-userbuttons">
+              <button type="button" class="btn btn-primary btn-sm">Follow</button>
+              <button type="button" class="btn btn-secondary btn-sm">Message</button>
+            </div>
+            <!-- END SIDEBAR BUTTONS -->
+          </div>
+          <!-- END SIDEBAR -->
+        </div>
+
+        <div class="col-md-8">
+          <div class="profile-content">
+            <div class="container"> 
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#informacoes" data-toggle="tab">Informações</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#cardapio" data-toggle="tab">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#promocoes" data-toggle="tab">Promoções</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" data-toggle="tab">Disabled</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="informacoes">
+                <h3>Segue as informações</h3>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="cardapio">
+                <h3>Aqui está o cardápio</h3>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="promocoes">
+              <h3>Promoções aqui!</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+          
       </div>
-      
     </div>
   </div>
-  <!--fim do conteudo-->
+  <!-- FIM - Content -->
   
+<!-- INICIO - Footer -->
   <div class="bg-dark text-white">
     <div class="container">
       <div class="row">
@@ -127,11 +125,11 @@
         <div class="p-4 col-md-4">
           <h4 class="mb-4 text-secondary">Mapa do Site</h4>
           <ul class="list-unstyled">
-            <a href="index.html" class="text-white">Home</a>
+            <a href="#" class="text-white">Home</a>
             <br>
-            <a href="#" class="text-white">About us</a>
+            <a href="#" class="text-white">Sobre nós</a>
             <br>
-            <a href="#" class="text-white">Our services</a>
+            <a href="#" class="text-white">Como funciona</a>
             <br>
             <a href="#" class="text-white">Stories</a>
           </ul>
@@ -154,6 +152,7 @@
           <p class="text-center text-white">© Copyright 2017 SmartFome - All rights reserved. </p>
         </div>
       </div>
+      <!-- FIM - Footer -->
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
