@@ -32,6 +32,14 @@ Licensed under MIT
   
 }
 
+.profile-userpic-change {
+  display: block;
+  float: none;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+}
+
 .profile-usertitle {
   text-align: center;
   margin-top: 20px;
@@ -51,6 +59,8 @@ Licensed under MIT
   font-weight: 600;
   margin-bottom: 15px;
 }
+
+
 
 .profile-userbuttons {
   text-align: center;
