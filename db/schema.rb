@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20171016010333) do
   create_table "profiles", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
+    t.string   "category"
     t.string   "address"
     t.string   "phone"
     t.datetime "created_at",  null: false
@@ -54,7 +55,9 @@ ActiveRecord::Schema.define(version: 20171016010333) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "username"
     t.string   "name"
+    t.string   "surname"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
