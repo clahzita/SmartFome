@@ -10,7 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+  <%= f.text_field :name %>
+  <%= f.text_field :description %>
+  <%= f.number_field :price, value: number_with_precision(f.object.price, precision: 2) %>
   <div class="actions">
     <%= f.submit %>
   </div>
