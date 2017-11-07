@@ -33,13 +33,14 @@ ActiveRecord::Schema.define(version: 20171016010333) do
   add_index "products", ["menu_id"], name: "index_products_on_menu_id"
 
   create_table "profiles", force: :cascade do |t|
-    t.string   "name"
+    t.string   "business_name"
     t.text     "description"
     t.string   "category"
     t.string   "address"
     t.string   "phone"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "payment_method"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "user_id"
   end
 
