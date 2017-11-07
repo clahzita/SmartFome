@@ -87,43 +87,30 @@
               </div>
               <div role="tabpanel" class="tab-pane fade" id="cardapio">
                 <!-- Cardápio do usuário-->
-                <div class="row">
-                  <div class="col-md-3">
-                    <img class="img-responsive icon-pfl" src="https://www.shareicon.net/data/128x128/2016/01/08/700255_food_512x512.png">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>cachorro quente</h4>
-                  </div>
-                  <div class="col-md-3">
-                    <h4>R$ 3,00</h4>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-md-3">
-                    <img class="img-responsive icon-pfl" src="https://image.flaticon.com/icons/png/128/79/79046.png">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>refrigerante</h4>
-                  </div>
-                  <div class="col-md-3">
-                    <h4>R$ 2,00</h4>
-                  </div>
-                </div>
-                <hr>
+                <% @menu.products.each do |product| %>
                 <div class="row">
                   <div class="col-md-3">
                     <img class="img-responsive icon-pfl" src="https://www.shareicon.net/data/128x128/2015/12/30/695368_food_512x512.png">
                   </div>
                   <div class="col-md-6">
-                    <h4>X-Burger</h4>
+                    <h4><%= product.name %></h4>
                   </div>
                   <div class="col-md-3">
-                    <h4>R$ 4,00</h4>
+                    <h4>R$ <%= product.price %></h4>
                   </div>
                 </div>
-                
-                
+                <hr>
+                <% end %>
+                <% if current_user.id == @profile.user.id %>
+                <div class="row" style="padding-top: 1rem">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <%= button_tag(type: 'button', class: 'btn navbar-btn ml-2 text-white btn-secondary') do %>
+                      <%= link_to "Cadastrar produto", new_product_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <% end %>
               </div>
               <div role="tabpanel" class="tab-pane fade" id="promocoes">
                 <!-- Promoções do usuário-->
