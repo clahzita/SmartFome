@@ -1,22 +1,80 @@
 <%= form_for(@profile) do |f| %>
-  <% if @profile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
-
-      <ul>
-      <% @profile.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="form-group has-danger">
+            <label class="sr-only" for="email">E-Mail</label>
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+              <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                <%= f.text_field :business_name, class: "form-control", id: "email", placeholder: "Nome do negócio", autofocus: true %>
+              </div>
+        </div>
     </div>
-  <% end %>
-  <%= f.text_field :business_name %>
-  <%= f.text_field :description %>
-  <%= f.text_field :category %>
-  <%= f.text_field :address %>
-  <%= f.text_field :phone %>
-  <%= f.text_field :payment_method %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="form-group has-danger">
+            <label class="sr-only" for="email">E-Mail</label>
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                  <%= f.text_field :description, class: "form-control", id: "email", placeholder: "Descrição", autofocus: true %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="form-group has-danger">
+            <label class="sr-only" for="email">E-Mail</label>
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                  <%= f.text_field :category, class: "form-control", id: "email", placeholder: "Categoria do negócio", autofocus: true %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="form-group has-danger">
+            <label class="sr-only" for="email">E-Mail</label>
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                  <%= f.text_field :address, class: "form-control", id: "email", placeholder: "Endereço", autofocus: true %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="form-group has-danger">
+            <label class="sr-only" for="email">E-Mail</label>
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                  <%= f.text_field :phone, class: "form-control", id: "email", placeholder: "Telefone", autofocus: true %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="form-group has-danger">
+            <label class="sr-only" for="email">E-Mail</label>
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+              <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                <%= f.text_field :payment_method, class: "form-control", id: "email", placeholder: "Método de pagamento", autofocus: true %>
+              </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="padding-top: 1rem">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <button type="submit" class="btn text-white btn-secondary"><i class="fa fa-sign-up"></i>cadastrar</button>
+    </div>
+</div>
 <% end %>

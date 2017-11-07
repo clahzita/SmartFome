@@ -3,47 +3,69 @@
 
 <head>
   <title>SmartFome</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  <link rel="stylesheet" href="/css/ourstyle.css" type="text/css">
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css"> </head>
+  <link rel="stylesheet" href="smartfome/app/asset/stylesheets/perfil.css" type="text/css">
+  <link rel="stylesheet" href="smartfome/app/asset/stylesheets/style.css" type="text/css">
+  <link rel="stylesheet" href="smartfome/app/asset/stylesheets/cadastro.css" type="text/css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http:///ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="etapas.js"></script>
 
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hamburger_PNG_Vector_Clipart.png?m=1434268872" width="30" height="30" class="d-inline-block align-top" alt=""><b>SmartFome</b></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span> </button>
-      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
-        <ul class="navbar-nav text-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-bookmark-o"></i>Como funciona</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i>Sobre nós</a>
-          </li>
-        </ul>
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hamburger_PNG_Vector_Clipart.png?m=1434268872" width="30" height="30" class="d-inline-block align-top" alt=""><b>SmartFome</b>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <form class="form-inline m-0">
+            <input class="form-control input-sm mr-2" type="text" placeholder="Digite a comida que deseja">
+            <button class="btn btn-secondary" type="submit" value="Buscar">
+              <span class="glyphicon glyphicon-search"></span>Buscar
+            </button>
+          </form>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-bookmark-o"></i> Como funciona</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i>Sobre nós</a>
+        </li>
         <% if user_signed_in? %>
-          <%= button_tag(type: 'button', class: 'btn navbar-btn ml-2 text-white btn-secondary') do %>
-            <i class="fa d-inline fa-lg fa-user-circle-o"></i>
-            <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-          <% end %>
+          
+          <li class="nav-item">
+          <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="form_perfil.html">Editar</a>
+                <a class="dropdown-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a>
+              </div>
+          </div>
+        </li>
         <% else %>
           <%= button_tag(type: 'button', class: 'btn navbar-btn ml-2 text-white btn-secondary') do %>
             <i class="fa d-inline fa-lg fa-user-circle-o"></i>
             <%= link_to "Cadastre-se ou Entre", new_user_session_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %>
           <% end %>
         <% end %>
-      </div>
+        
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
   
   <div class="opaque-overlay py-5">
     <div class="container py-5 ">

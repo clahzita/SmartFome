@@ -1,4 +1,151 @@
-<p id="notice"><%= notice %></p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css"> </head>
+  <link rel="stylesheet" href="css/perfil.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  
+</head>
+<div class="opaque-overlay">
+    <div class="container">
+        <div class="row profile">
+        <div class="p-4 col-md-4">          
+          <!-- SIDEBAR -->
+          <div class="profile-sidebar">
+            <!-- SIDEBAR USERPIC -->
+            <div class="profile-userpic">
+            <img src="https://openclipart.org/image/2400px/svg_to_png/211821/matt-icons_preferences-desktop-personal.png" class="img-responsive" alt="" width="200" height="190">
+            </div>
+            <!-- END SIDEBAR USERPIC -->
+            <!-- SIDEBAR USER TITLE -->
+            <div class="profile-usertitle">
+              <div class="profile-usertitle-name">
+                <%= @profile.business_name %>
+              </div>
+              <div class="profile-usertitle-category">
+                <%= @profile.category %>
+              </div><div class="profile-usertitle-category">
+                <%= @profile.description %>
+              </div>
+            </div>
+            <!-- END SIDEBAR USER TITLE -->
+            <!-- SIDEBAR BUTTONS -->
+            <div class="profile-userbuttons">
+              <button type="button" class="btn btn-primary btn-sm">Follow</button>
+              <button type="button" class="btn btn-secondary btn-sm">Message</button>
+            </div>
+            <!-- END SIDEBAR BUTTONS -->
+          </div>
+          <!-- END SIDEBAR -->
+        </div>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+        <div class="p-4 col-md-8">
+          <div class="profile-content">
+            <div class="container"> 
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#informacoes" data-toggle="tab">Informações</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#cardapio" data-toggle="tab">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#promocoes" data-toggle="tab">Promoções</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="informacoes">
+                <!-- Informações do usuário-->
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-2">
+                    <img class="img-responsive icon-pfl" src="https://apiki.com/wp-content/uploads/2016/09/criacao-sites-baratos-pagamento-facilitado.png" width="56" height="56">
+                  </div>
+                  <div class="col-md-9">
+                    <h5>Forma de Pagamento: </h5>
+                    <%= @profile.payment_method %>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-2">
+                    <img class="img-responsive icon-pfl" src="https://icon-icons.com/icons2/622/PNG/128/whatsapp-logo_icon-icons.com_57054.png" width="56" height="56">
+                  </div>
+                  <div class="col-md-9">
+                    <h5>Contato: </h5>
+                    <p><%= @profile.phone %></p>
+                    <h5>Endereço: </h5>
+                    <p><%= @profile.address %></p>
+                  </div>
+                </div>
+                
+                
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="cardapio">
+                <!-- Cardápio do usuário-->
+                <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-responsive icon-pfl" src="https://www.shareicon.net/data/128x128/2016/01/08/700255_food_512x512.png">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>cachorro quente</h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>R$ 3,00</h4>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-responsive icon-pfl" src="https://image.flaticon.com/icons/png/128/79/79046.png">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>refrigerante</h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>R$ 2,00</h4>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-responsive icon-pfl" src="https://www.shareicon.net/data/128x128/2015/12/30/695368_food_512x512.png">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>X-Burger</h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>R$ 4,00</h4>
+                  </div>
+                </div>
+                
+                
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="promocoes">
+                <!-- Promoções do usuário-->
+              <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-responsive icon-pfl" src="https://www.shareicon.net/data/128x128/2016/01/11/701813_drink_512x512.png">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>refrigerante + hamburguer</h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>R$ 5,00</h4>
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+
+          </div>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+  <!-- FIM - Content -->
