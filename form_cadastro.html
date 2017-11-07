@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css"> </head>
+<link rel="stylesheet" href="css/perfil.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/cadastro.css" type="text/css">
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="http:///ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="etapas.js"></script>
+
+</head>
+
+<body>
+<!-- INICIO - Header Login Ativo -->
+<nav class="navbar navbar-expand-md bg-primary navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hamburger_PNG_Vector_Clipart.png?m=1434268872" width="30" height="30" class="d-inline-block align-top" alt=""><b>SmartFome</b>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <form class="form-inline m-0">
+            <input class="form-control input-sm mr-2" type="text" placeholder="Digite a comida que deseja">
+            <button class="btn btn-secondary" type="submit" value="Buscar">
+              <span class="glyphicon glyphicon-search"></span>Buscar
+            </button>
+          </form>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-bookmark-o"></i> Como funciona</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i>Sobre nós</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="form_perfil.html">Editar</a>
+                <a class="dropdown-item" href="index.html">Sair</a>
+              </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- FIM - Header Login Ativo -->
+
+<!-- INICIO - Content -->
+  <div class="opaque-overlay">
+    <div class="container">
+      <div class="row profile">
+        <div class="container">
+         <div class="container">
+        <div class="row form-group">
+            <div class="col-12">
+                <ul class="nav nav-pills nav-justified setup-panel">
+                    <li class="active nav-item"><a href="#step-1" class="nav-link">
+
+                    <h4 class="list-group-item-heading">Etapa 1</h4>
+
+                    <p class="list-group-item-text">Informações do Usuário</p>
+                      </a>
+                    </li>
+
+                    <li class="disabled nav-item"><a href="#step-2" class="nav-link">
+
+                    <h4 class="list-group-item-heading">Etapa 2</h4>
+
+                    <p class="list-group-item-text">Informações do Negócio</p>
+
+                      </a>
+                    </li>
+
+                    <li class="disabled nav-item"><a href="#step-3" class="nav-link">
+
+                    <h4 class="list-group-item-heading">Etapa 3</h4>
+
+                    <p class="list-group-item-text">Finalizando</p>
+
+                      </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <!-- Inicio: step 1 -->
+        <div class="row setup-content" id="step-1">
+          <div class="col-lg-12 well text-center">            
+              <div class="col-md-8 personal-info">
+                <form class="form-horizontal justify-content-center" role="form">
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Nome:</label>
+                          <div class="col-md-9">
+                            <input class="form-control" value="Jane" type="text">
+                          </div>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Sobrenome:</label>
+                      <div class="col-md-9">
+                          <input class="form-control" value="Bishop" type="text">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Usuário:</label>
+                      <div class="col-md-9">
+                          <input class="form-control" value="Bishop" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">E-mail:</label>
+                      <div class="col-md-9">
+                        <input class="form-control" type="email" value="zezinho@example.com" id="example-email-input">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Senha:</label>
+                      <div class="col-md-9">
+                        <input class="form-control" value="11111122333" type="password">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Confirmar senha:</label>
+                      <div class="col-md-9">
+                          <input class="form-control" value="11111122333" type="password">
+                      </div>
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+                
+                <div class="col-lg-12 well text-center">
+                    <button id="activate-step-2" class="btn btn-primary btn-md">Próxima</button>
+                </div>
+            
+        </div>
+        <!-- Fim: step 1 -->
+
+        <!-- Inicio: step 2 -->
+        <div class="row setup-content" id="step-2">
+            <div class="col-lg-12 well text-center">            
+              <div class="col-md-8 personal-info">
+                <form class="form-horizontal justify-content-center" role="form">
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Nome do Negócio:</label>
+                          <div class="col-md-9">
+                            <input class="form-control" value="Zezinho Lanches" type="text">
+                          </div>
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Categoria do Negócio:</label>
+                      <div class="col-md-9">
+                        <div class="ui-select">
+                          <select id="user_time_zone" class="form-control">
+                            <option value="carrinho">Carrinho de Comida</option>
+                            <option value="caminhao">Caminhão de Comida</option>
+                            <option value="carro">Carro de Comida</option>
+                            <option value="lanchonete">Lanchonete</option>
+                            <option value="marmitaria">Marmitaria</option>
+                            <option value="individual">Individual</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Localização:</label>
+                      <div class="col-md-9">
+                          <input class="form-control" value="Bishop" type="text">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Contato:</label>
+                      <div class="col-md-9">
+                          <input class="form-control" type="tel" value="(55) 95555-5555" id="example-tel-input">
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label class="col-md-3 control-label">Forma de Pagamento:</label>
+                      <div class="col-md-9">
+                        
+                        <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Dinheiro
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Cartão Débito
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Cartão Crédito
+                    </label>
+                  </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  
+
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-12 well text-center">
+              <button id="activate-step-3" class="btn btn-primary btn-md">Próxima</button>
+            </div>
+
+        </div>
+        <!-- Fim: step 2 -->
+
+        <!-- Inicio: step 3 -->
+        <div class="row setup-content" id="step-3">
+            <div class="col-12">
+                <div class="col-lg-12 well">
+                     <h1 class="text-center"> Atenção!</h1>
+                     <p class="text-center">Para que você seja encontrado na busca é necessário incluir o seu cardápio.</p>
+                     
+                </div>
+                <div class="col-lg-12 well text-center">
+                  <button type="submit" class="btn btn-primary">Finalizar</button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim: step 3 -->
+
+    </div>
+        
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- FIM - Content -->
+
+<!-- INICIO - Footer -->
+<div class="bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="p-4 col-md-4">
+        <h4 class="mb-4 text-secondary">SmartFome</h4>
+        <p class="text-white">Encontre aqui o lugar perfeito para matar sua fome.</p>
+      </div>
+      <div class="p-4 col-md-4">
+        <h4 class="mb-4 text-secondary">Mapa do Site</h4>
+        <ul class="list-unstyled">
+          <a href="index.html" class="text-white">Home</a>
+          <br>
+          <a href="#" class="text-white">Sobre nós</a>
+          <br>
+          <a href="#" class="text-white">Como funciona</a>
+          <br>
+          <a href="#" class="text-white">Stories</a>
+        </ul>
+      </div>
+      <div class="p-4 col-md-4">
+        <h4 class="mb-4 text-secondary">Contato</h4>
+        <p>
+          <a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 text-secondary fa-phone"></i>+55 - 99999-9999</a>
+        </p>
+        <p>
+          <a href="mailto:info@pingendo.com" class="text-white"><i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>info@smartfome.com</a>
+        </p>
+        <p>
+          <a href="https://goo.gl/maps/oG8g2BdZyQT2" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-map-marker text-secondary"></i>Av. Capitão Mor Golveia - Lagoa Nova, Natal - RN</a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mt-3">
+        <p class="text-center text-white">© Copyright 2017 SmartFome - All rights reserved. </p>
+      </div>
+    </div>
+    <!-- FIM - Footer -->
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>
