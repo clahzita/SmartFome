@@ -2,21 +2,20 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
   <title>SmartFome</title>
-  <%= javascript_include_tag 'defaults', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="http:///ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="etapas.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css"> </head>
-  <link rel="stylesheet" href="perfil.css" type="text/css">
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel="stylesheet" href="cadastro.css" type="text/css">
+  <link rel="stylesheet" href="css/perfil.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   
 
 </head>
@@ -34,7 +33,7 @@
       <ul class="navbar-nav text-center">
         <li class="nav-item">
           <form class="form-inline m-0">
-            <input class="form-control input-sm mr-2" type="text" placeholder="Digite a comida que deseja">
+            <input class="form-control input-sm mr-2" type="text" placeholder="Digite a comida" >
             <button class="btn btn-secondary" type="submit" value="Buscar">
               <span class="glyphicon glyphicon-search"></span>Buscar
             </button>
@@ -47,18 +46,30 @@
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i>Sobre nós</a>
         </li>
-        <% if user_signed_in? %>
+        <% if user_signed_in? and current_user.profile != nil %>
           <li class="nav-item">
           <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <center><a class="dropdown-item"><%= link_to 'Perfil', profile_path(id: current_user.profile.id) %> </a></center>
                 <center><a class="dropdown-item"><%= link_to 'Editar perfil', edit_profile_path(id: current_user.profile.id) %> </a></center>
-                <center><a class="dropdown-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a></center>
+                <center><a class="dropdown-item"><%= link_to 'Logout', destroy_user_session_path, method: :get %></a></center>
               </div>
           </div>
         </li>
-        <% else %>
+        <% elsif user_signed_in? %>
+          <li class="nav-item">
+            <div class="dropdown show">
+              <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <center><a class="dropdown-item"><%= link_to 'Criar perfil', new_profile_path %> </a></center>
+                  <center><a class="dropdown-item"><%= link_to 'Logout', destroy_user_session_path, method: :get %></a></center>
+                </div>
+            </div>
+          </li>
+        <% else  %>
+          
+          <center><a class="dropdown-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a></center>
           <%= button_tag(type: 'button', class: 'btn navbar-btn ml-2 text-white btn-secondary') do %>
             <i class="fa d-inline fa-lg fa-user-circle-o"></i>
             <%= link_to "Cadastre-se ou Entre", new_user_session_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %>
