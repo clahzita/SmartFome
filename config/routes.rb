@@ -62,4 +62,6 @@ Rails.application.routes.draw do
   
   resources :profiles
   resources :products
+  
+  get '/pages/search' => 'pages#search_index'
 end
