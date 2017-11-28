@@ -1,3 +1,7 @@
-<% @profiles.each do |profile| %>
-  <%= profile.business_name %>
+<% if @profiles.count.zero? %>
+  Sua busca não retornou resultados.
+<% else %>
+  <% @profiles.each do |profile| %>
+    <%= profile.business_name %>
+  <% end %>
 <% end %>

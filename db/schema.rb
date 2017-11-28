@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171016010333) do
     t.string   "address"
     t.string   "phone"
     t.string   "payment_method"
+    t.integer  "popularity"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "user_id"
