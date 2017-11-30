@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>SmartFome</title>
-  <%= javascript_include_tag :defaults %>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <!--<%= javascript_include_tag :defaults %>-->
+  <%= stylesheet_link_tag 'https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css', media: 'all' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -20,8 +22,8 @@
   <nav class="navbar navbar-expand-md bg-primary navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Fast-Food-PNG-Clipart/Hamburger_PNG_Vector_Clipart.png?m=1434268872" width="30" height="30" class="d-inline-block align-top" alt=""><b>SmartFome</b>
-    </a>
+      <%= image_tag("iconlogo.png", size: "30x30", class: "d-inline-block align-top", alt: "SmartFome")%>
+        <b>SmartFome</b></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -57,7 +59,7 @@
             </div>
           </li>
         <% else %>
-          <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/users/sign_in"><i class="fa d-inline fa-lg fa-user-circle-o"></i>  Cadastre-se ou Entre</a>
+          <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/users/sign_in"><i class="fa d-inline fa-lg fa-user-circle-o"></i> Entrar</a>
         <% end %>
       </ul>
     </div>
@@ -76,7 +78,7 @@
     </div>
   </div>
   
-  <!-- Footer -->
+  <!-- INICIO - Footer -->
   <div class="bg-dark text-white">
     <div class="container">
       <div class="row">
@@ -87,7 +89,7 @@
         <div class="p-4 col-md-4">
           <h4 class="mb-4 text-secondary">Mapa do Site</h4>
           <ul class="list-unstyled">
-            <a href="index.html" class="text-white">Home</a>
+            <a href="/" class="text-white">Home</a>
             <br>
             <a href="#" class="text-white">Sobre nós</a>
             <br>
@@ -98,15 +100,13 @@
         </div>
         <div class="p-4 col-md-4">
           <h4 class="mb-4 text-secondary">Contato</h4>
-          <p>
-            <a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 text-secondary fa-phone"></i>+55 - 99999-9999</a>
-          </p>
-          <p>
+          <ul class="list-unstyled">
+            <a href="tel:+55 - 99999-9999" class="text-white"><i class="fa d-inline mr-3 text-secondary fa-phone"></i>+55 - 99999-9999</a>
+            <br>
             <a href="mailto:info@smartfome.com" class="text-white"><i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>info@smartfome.com</a>
-          </p>
-          <p>
-            <a href="https://goo.gl/maps/oG8g2BdZyQT2" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-map-marker text-secondary"></i>Av. Capitão Mor Golveia - Lagoa Nova, Natal - RN</a>
-          </p>
+            <br>
+            <%= link_to "Av. Cap. Mor Golveia - Natal/RN", "https://goo.gl/maps/oG8g2BdZyQT2", class: "fa d-inline mr-3 fa-map-marker text-white", target: "blank", data: { confirm: "Você será redirecionado para Google Maps." } %>
+          </ul>
         </div>
       </div>
       <div class="row">
@@ -114,6 +114,7 @@
           <p class="text-center text-white">© Copyright 2017 SmartFome - All rights reserved. </p>
         </div>
       </div>
+      <!-- FIM - Footer -->
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
