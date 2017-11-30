@@ -1,75 +1,71 @@
 <!DOCTYPE html>
 <html>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-  <div class="row">
-      <div class="col-md-3"></div>
-      
-      <div class="col-md-6">
-          <h2 class="text-dark">Por favor, informe seus dados.</h2>
-          <hr>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-          <div class="form-group has-danger">
-              <label class="sr-only" for="email">E-Mail</label>
-              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                  <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-                  <%= f.email_field :email, class: "form-control", id: "email", placeholder: "email@exemplo.com", autofocus: true %>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-          <div class="form-group">
-              <label class="sr-only" for="password">Senha</label>
-              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                  <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
-                  <%= f.password_field :password, class: "form-control", id: "password", placeholder: "Senha", required: true, autocomplete: "off" %>
-              </div>
-          </div>
-      </div>
-  </div>
-  
-  <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-          <%= link_to "Esqueceu sua senha?", new_password_path(resource_name) %>
-      </div>
-  </div>
-  
-  <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6" style="padding-top: .35rem">
-          <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-              <label class="form-check-label">
-                  <% if devise_mapping.rememberable? -%>
-                    <div class="field">
-                      <%= f.check_box :remember_me %>
-                      <%= f.label :remember_me, 'Lembrar de mim', style: "padding-bottom: .15rem" %>
-                    </div>
-                  <% end -%>
-              </label>
-          </div>
-      </div>
-  </div>
-  
-  
-  <div class="row" style="padding-top: 1rem">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-          <button type="submit" class="btn text-white btn-secondary"><i class="fa fa-sign-in"></i> Entrar</button>
-          ou
-          <%= button_tag(type: 'button', class: 'btn navbar-btn ml-2 text-white btn-secondary') do %>
-            <i class="fa d-inline fa-lg fa-user-circle-o"></i>
-            <%= link_to "Cadastre-se aqui!", new_registration_path(resource_name), {:style=>'color:#FFFFFF;', :class => "css_class"} %>
-          <% end %>
-      </div>
-  </div>
-
+    <%= devise_error_messages! %>
+    <div class="row">
+        <div class="col-md-3"></div>
+        
+        <div class="col-md-6">
+            <h2 class="text-dark">Por favor, informe seus dados.</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="form-group has-danger">
+                <label class="sr-only" for="email">E-Mail</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                    <%= f.email_field :email, class: "form-control", id: "email", placeholder: "email@exemplo.com", autofocus: true %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="sr-only" for="password">Senha</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                    <%= f.password_field :password, class: "form-control", id: "password", placeholder: "Senha", required: true, autocomplete: "off" %>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <%= link_to "Esqueceu sua senha?", new_password_path(resource_name) %>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="padding-top: .35rem">
+            <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                <label class="form-check-label">
+                    <% if devise_mapping.rememberable? -%>
+                      <div class="field">
+                        <%= f.check_box :remember_me %>
+                        <%= f.label :remember_me, 'Lembrar de mim', style: "padding-bottom: .15rem" %>
+                      </div>
+                    <% end -%>
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="row" style="padding-top: 1rem">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <button type="submit" class="btn text-white btn-secondary"><i class="fa fa-sign-in"></i> Entrar</button>
+            ou
+            <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/users/sign_up"><i class="fa d-inline fa-lg fa-user-circle-o"></i>  Cadastre-se aqui!</a>
+        </div>
+    </div>
   <% end %>
 </html>

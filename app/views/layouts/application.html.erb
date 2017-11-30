@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>SmartFome</title>
   <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="http:///ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="etapas.js"></script>
@@ -13,11 +14,6 @@
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css"> </head>
-  <link rel="stylesheet" href="css/perfil.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  
-
 </head>
 
 <body>
@@ -39,47 +35,34 @@
             </button>
           </form>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-bookmark-o"></i> Como funciona</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i>Sobre nós</a>
         </li>
-        <% if user_signed_in? and current_user.profile != nil %>
-          <li class="nav-item">
-          <div class="dropdown show">
-            <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <center><a class="dropdown-item"><%= link_to 'Perfil', profile_path(id: current_user.profile.id) %> </a></center>
-                <center><a class="dropdown-item"><%= link_to 'Editar perfil', edit_profile_path(id: current_user.profile.id) %> </a></center>
-                <center><a class="dropdown-item"><%= link_to 'Logout', destroy_user_session_path, method: :get %></a></center>
-              </div>
-          </div>
-        </li>
-        <% elsif user_signed_in? %>
+        <% if user_signed_in? %>
           <li class="nav-item">
             <div class="dropdown show">
               <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <center><a class="dropdown-item"><%= link_to 'Criar perfil', new_profile_path %> </a></center>
-                  <center><a class="dropdown-item"><%= link_to 'Logout', destroy_user_session_path, method: :get %></a></center>
+                  <% if !current_user.profile.nil? %>
+                    <a class="dropdown-item" href="/profiles/<%= current_user.profile.id %>">Perfil</a>
+                    <a class="dropdown-item" href="/profiles/<%= current_user.profile.id %>/edit">Editar perfil</a>
+                  <% else %>
+                    <a class="dropdown-item" href="/profiles/new">Criar perfil</a>
+                  <% end %>
+                  <a class="dropdown-item" href="/users/sign_out" method="get">Sair</a>
                 </div>
             </div>
           </li>
-        <% else  %>
-          
-          <center><a class="dropdown-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></a></center>
-          <%= button_tag(type: 'button', class: 'btn navbar-btn ml-2 text-white btn-secondary') do %>
-            <i class="fa d-inline fa-lg fa-user-circle-o"></i>
-            <%= link_to "Cadastre-se ou Entre", new_user_session_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %>
-          <% end %>
+        <% else %>
+          <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/users/sign_in"><i class="fa d-inline fa-lg fa-user-circle-o"></i>  Cadastre-se ou Entre</a>
         <% end %>
-        
       </ul>
     </div>
   </div>
-</nav>
+  </nav>
   
   <div class="opaque-overlay py-5">
     <div class="container py-5 ">
@@ -131,17 +114,14 @@
           <p class="text-center text-white">© Copyright 2017 SmartFome - All rights reserved. </p>
         </div>
       </div>
-      
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
-  
-
-
 </html>
+
 <script>
 $(".dropdown show").click(function(){
     $(".dropdown menu").slideToggle();

@@ -12,6 +12,7 @@
 <div class="row" style="padding-top: 1rem">
   <div class="col-md-3"></div>
   <div class="col-md-6">
+    <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/profiles/<%= current_user.profile.id %>">Voltar</a>
     <%= button_tag(type: 'button', class: 'btn navbar-btn ml-2 text-white btn-secondary') do %>
       <%= link_to "Voltar", profile_path(id: current_user.profile.id), {:style=>'color:#FFFFFF;', :class => "css_class"} %>
     <% end %>
