@@ -91,13 +91,13 @@
               </div>
               <hr>
               <% end %>
-              <% if current_user.id == @profile.user.id %>
-              <div class="row" style="padding-top: 1rem">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                  <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/products/new">Cadastre-se aqui!</a>
+              <% if user_signed_in? and current_user.id == @profile.user.id %>
+                <div class="row" style="padding-top: 1rem">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/products/new">Cadastrar um produto</a>
+                  </div>
                 </div>
-              </div>
               <% end %>
             </div>
             
