@@ -45,7 +45,7 @@ class ProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Perfil editado com sucesso.' }
+        format.html { redirect_to @profile, notice: 'Perfil atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @profile }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class ProfilesController < ApplicationController
   def destroy
     @profile.destroy
     respond_to do |format|
-      format.html { redirect_to profiles_url, notice: 'Perfil deletado com sucesso.' }
+      format.html { redirect_to profiles_url, notice: 'Perfil apagado com sucesso.' }
       format.json { head :no_content }
     end
   end
