@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171203170551) do
+ActiveRecord::Schema.define(version: 20171203212709) do
 
   create_table "menus", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -25,10 +25,15 @@ ActiveRecord::Schema.define(version: 20171203170551) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "profile_id"
   end
 
-  add_index "payment_methods", ["profile_id"], name: "index_payment_methods_on_profile_id"
+  create_table "payment_methods_profiles", id: false, force: :cascade do |t|
+    t.integer "profile_id",        null: false
+    t.integer "payment_method_id", null: false
+  end
+
+  add_index "payment_methods_profiles", ["payment_method_id"], name: "index_payment_methods_profiles_on_payment_method_id"
+  add_index "payment_methods_profiles", ["profile_id"], name: "index_payment_methods_profiles_on_profile_id"
 
   create_table "products", force: :cascade do |t|
     t.string   "name"

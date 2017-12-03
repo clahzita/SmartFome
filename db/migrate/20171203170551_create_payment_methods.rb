@@ -4,7 +4,6 @@ class CreatePaymentMethods < ActiveRecord::Migration
       t.string :name
 
       t.timestamps null: false
-      t.belongs_to :profile, index: true
     end
   end
 end

@@ -21,24 +21,28 @@ Profile.create(business_name: "Pop Steak",
                address: "Rua Halley Mestrinho, Ponta Negra - CEP: 59090-160, Natal/RN.",
                phone: "(84) XXXXX-XXXX",
                popularity: 0,
-               user_id: "1")
+               user_id: "1",
+               payment_method_ids: ["1", "2", "3"])
 Profile.create(business_name: "BROWNIE MANIA",
                description: "1º Food Truck de Brownie do Brasil,Trabalhamos com grande variedade de brownies, derivados e Waffles.",
                category: "Food Truck",
                address: "Rua Halley Mestrinho, Ponta Negra - CEP: 59090-160, Natal/RN.",
                phone: "(84) XXXXX-XXXX",
                popularity: 0,
-               user_id: "2")
+               user_id: "2",
+               payment_method_ids: ["1", "2", "3"])
 Profile.create(business_name: "Adoro Massa",
                description: "Food truck especializado em massas italiana.",
                category: "Food Truck", address: "Rua Ataulfo Alves, 1911 - Candelária, Natal/RN.",
                phone: "(84) XXXXX-XXXX",
                popularity: 0,
-               user_id: "3")
+               user_id: "3",
+               payment_method_ids: ["1", "2", "3"])
 Profile.create(business_name: "Mise en Place - Cozinha Gourmet",
                description: "Especialista em tapiocas alegrando o paladar dos nossos clientes",
                category: "Food Truck",
                address: "Av. Antônio Basílio, 2960 - Lagoa Nova, Natal - RN, 59056-500.",
                phone: "(84) XXXXX-XXXX",
                popularity: 0,
-               user_id: "4")
+               user_id: "4",
+               payment_method_ids: ["1", "2", "3"])
