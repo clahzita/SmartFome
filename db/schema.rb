@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016010333) do
+ActiveRecord::Schema.define(version: 20171203170551) do
 
   create_table "menus", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20171016010333) do
   end
 
   add_index "menus", ["profile_id"], name: "index_menus_on_profile_id"
+
+  create_table "payment_methods", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "profile_id"
+  end
+
+  add_index "payment_methods", ["profile_id"], name: "index_payment_methods_on_profile_id"
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
@@ -38,10 +47,9 @@ ActiveRecord::Schema.define(version: 20171016010333) do
     t.string   "category"
     t.string   "address"
     t.string   "phone"
-    t.string   "payment_method"
     t.integer  "popularity"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "user_id"
   end
 

@@ -62,7 +62,9 @@
                 </div>
                 <div class="col-md-9">
                   <h5>Forma de Pagamento: </h5>
-                  <%= @profile.payment_method %>
+                  <% @profile.payment_methods.each do |payment_method| %>
+                    <%= payment_method.name %><br>
+                  <% end %>
                 </div>
               </div>
               <br>

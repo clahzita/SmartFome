@@ -6,7 +6,6 @@ class CreateProfiles < ActiveRecord::Migration
       t.string  :category
       t.string  :address
       t.string  :phone
-      t.string  :payment_method
       t.integer :popularity
 
       t.timestamps null: false

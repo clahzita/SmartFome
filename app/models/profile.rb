@@ -1,6 +1,7 @@
 class Profile < ActiveRecord::Base
   belongs_to :user
   has_one    :menu
+  has_many   :payment_methods
   
   after_create :create_menu
   
