@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to profile_path(@product.menu.profile.id), notice: 'Product criado com sucesso.' }
+        format.html { redirect_to profile_path(@product.menu.profile.id), notice: 'Produto criado com sucesso.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
