@@ -97,17 +97,18 @@
                 </div>
                 <div class="col-md-1">
                   <%= link_to edit_product_path(product), class: "btn" do %>
-                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                   <% end %>
                 </div>
                 <div class="col-md-1">
-                  <%= link_to product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" do %>
-                      <i class="fa fa-trash" aria-hidden="true"></i>
+                  <%= link_to product, method: :delete, data: { confirm: 'Tem certeza que deseja excluir o produto?' }, class: "btn" do %>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
                   <% end %>
                 </div>
               </div>
               <hr>
               <% end %>
+              
               <% if user_signed_in? and current_user.id == @profile.user.id %>
                 <div class="row" style="padding-top: 1rem">
                   <div class="col-md-3"></div>

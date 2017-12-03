@@ -1,104 +1,59 @@
 <%= form_for(@product) do |f| %>
 <div class="opaque-overlay">
-    <div class="container p-4">
-        <div class="container">
-            <div class="row setup-content">
-              <div class="col-lg-12 well text-center profile"> 
-                  <div class="profile-content">
-                    <h2 class="text-dark">Adicione um item ao seu cardápio.</h2>
-                    <br>
-                    
-                    <form class="form-horizontal" role="form">
-                <div class="form-group">
-                  <div class="row">
-                    <label class="col-md-3 control-label">Nome da Comida:</label>
-                          <div class="col-md-9">
-                            <%= f.text_field :name, class: "form-control", id: "email", placeholder: "Coxinha de frango com catupiry", autofocus: true %>
-                          </div>
-                   </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <label class="col-md-3 control-label">Descrição:</label>
-                        <div class="col-md-9">
-                            <%= f.text_field :description, class: "form-control", id: "description", placeholder: "Coxinha tamanho médio, recheada com frango e catupiry.", autofocus: true %>
-                        </div>
-                   </div>
-                </div>
-                
-               
-
-                <div class="form-group">
-                    <div class="row">
-                      <label class="col-md-3 control-label">Preço:</label>
-                      <div class="col-md-9">
-                          <%= f.text_field :price, class: "form-control", id: "price", placeholder: "2,00", autofocus: true %>
-                      </div>
-                    </div>
-                  </div>
+  <div class="container p-4">
+    <div class="container">
+      <div class="row setup-content">
+        <div class="col-lg-12 well text-center profile"> 
+          <div class="profile-content">
+            <% if action_name == "new" %>
+              <h2 class="text-dark">Adicione um item ao seu cardápio.</h2>
+            <% elsif action_name == "edit" %>
+              <h2 class="text-dark">Edite o item.</h2>
+            <% end %>
+            <br>
                   
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary btn-md"><i class="fa fa-sign-up "></i>Inserir</button>
-                        
-                      </div>
-                    </div>                    
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <div class="row">
+                  <label class="col-md-3 control-label">Nome da Comida:</label>
+                  <div class="col-md-9">
+                    <%= f.text_field :name, class: "form-control", id: "email", placeholder: "Coxinha de frango com catupiry", autofocus: true %>
                   </div>
-                </form>
-                 </div>
-            </div>  
+                </div>
+              </div>
+                
+              <div class="form-group">
+                <div class="row">
+                  <label class="col-md-3 control-label">Descrição:</label>
+                  <div class="col-md-9">
+                      <%= f.text_field :description, class: "form-control", id: "description", placeholder: "Coxinha tamanho médio, recheada com frango e catupiry.", autofocus: true %>
+                  </div>
+                </div>
+              </div>
+                
+              <div class="form-group">
+                <div class="row">
+                  <label class="col-md-3 control-label">Preço(R$):</label>
+                  <div class="col-md-9">
+                      <%= f.text_field :price, value: number_with_precision(f.object.price, precision: 2), class: "form-control", id: "price", placeholder: "2,00", autofocus: true %>
+                  </div>
+                </div>
+              </div>
+                  
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary btn-md"><i class="fa fa-sign-up "></i>Inserir</button>
+                    <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/profiles/<%= current_user.profile.id %>">Voltar</a>
+                  </div>
+                </div>                    
+              </div>
+            </form>
           </div>
-          </div>
-            
-        </div>
+        </div>  
+      </div>
     </div>
-      
+  </div>
+</div>
 <!-- Fim: cadastro business -->
-
-
-
-
-<div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
-    <div class="form-group has-danger">
-      <label class="sr-only" for="email">E-Mail</label>
-      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-        <%= f.text_field :name, class: "form-control", id: "email", placeholder: "Nome do produto", autofocus: true %>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
-    <div class="form-group has-danger">
-      <label class="sr-only" for="email">E-Mail</label>
-      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-        <%= f.text_field :description, class: "form-control", id: "email", placeholder: "Descrição", autofocus: true %>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
-    <div class="form-group has-danger">
-      <label class="sr-only" for="email">E-Mail</label>
-      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-        <%= f.text_field :price, value: number_with_precision(f.object.price, precision: 2), class: "form-control", id: "email", placeholder: "Preço", autofocus: true %>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row" style="padding-top: 1rem">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
-    <button type="submit" class="btn text-white btn-secondary"><i class="fa fa-sign-up"></i>cadastrar</button>
-  </div>
-</div>
 <% end %>

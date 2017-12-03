@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to profile_path(@product.menu.profile.id), notice: 'Product was successfully created.' }
+        format.html { redirect_to profile_path(@product.menu.profile.id), notice: 'Product criado com sucesso.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-         format.html { redirect_to @product, notice: 'Produto foi atualizado com sucesso.' }
+         format.html { redirect_to profile_path(@product.menu.profile.id), notice: 'Produto foi atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to profiles_url, notice: 'Produto foi apagado com sucesso.' }
+      format.html { redirect_to profile_path(@product.menu.profile.id), notice: 'Produto foi apagado com sucesso.' }
       format.json { head :no_content }
     end
   end

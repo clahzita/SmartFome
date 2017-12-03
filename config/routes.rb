@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -60,8 +61,8 @@ Rails.application.routes.draw do
   
   root 'pages#home'
   
-  resources :profiles
-  resources :products
+  resources :profiles, except: [:index]
+  resources :products, except: [:show, :index]
   
   get '/pages/search' => 'pages#search_index'
 end
