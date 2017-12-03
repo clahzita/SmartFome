@@ -28,20 +28,18 @@
                     <div class="row">
                       <label class="col-md-3 control-label">Categoria do Negócio:</label>
                       <div class="col-md-9">
-                          <div class="ui-select">
-                               <%= select_tag( ':category', options_for_select(
-                              [
-                                ['Carrinho de Comida', 'carrinho'],
-                                ['Lanchonete', 'lanchonete'],
-                                ['Carro de Comida', 'carro'],
-                                ['Marmitaria', 'marmitaria'],
-                                ['Caminhão de Comida', 'caminhao'],
-                                ['Individual', 'individual']
-                              ], 'carrinho'
-                            ), class:"form-control")%>
-                            
-                          </div>
-
+                        <div class="ui-select">
+                          <%= f.select(:category, options_for_select(
+                            [
+                              ['Carrinho de Comida', 'Carrinho de Comida'],
+                              ['Lanchonete', 'Lanchonete'],
+                              ['Carro de Comida', 'Carro de Comida'],
+                              ['Marmitaria', 'Marmitaria'],
+                              ['Caminhão de Comida', 'Caminhão de Comida'],
+                              ['Individual', 'Individual']
+                            ], @default_value
+                          ), {}, {class:"form-control"})%>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>SmartFome</title>
-  <!--<%= javascript_include_tag :defaults %>-->
+  <%= javascript_include_tag :defaults %>
   <%= stylesheet_link_tag 'https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css', media: 'all' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
   <%= csrf_meta_tags %>
   
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -46,7 +46,7 @@
         <% if user_signed_in? %>
           <li class="nav-item">
             <div class="dropdown show">
-              <a class="btn btn-secondary dropdown-toggle" href="/profiles/<%= current_user.profile.id %>" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
+              <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Meu Perfil </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <% if !current_user.profile.nil? %>
                     <a class="dropdown-item" href="/profiles/<%= current_user.profile.id %>">Perfil</a>

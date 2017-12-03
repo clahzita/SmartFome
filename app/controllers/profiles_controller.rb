@@ -21,6 +21,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    @default_value = @profile.category
   end
 
   # POST /profiles
