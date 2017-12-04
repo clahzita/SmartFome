@@ -36,12 +36,7 @@
       </div>
     </div>
     
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-          <%= link_to "Esqueceu sua senha?", new_password_path(resource_name) %>
-      </div>
-    </div>
+    
     
     <div class="row">
       <div class="col-md-3"></div>
@@ -63,9 +58,22 @@
       <div class="col-md-3"></div>
       <div class="col-md-6">
         <button type="submit" class="btn text-white btn-secondary"><i class="fa fa-sign-in"></i> Entrar</button>
-        ou
-        <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/users/sign_up"><i class="fa d-inline fa-lg fa-user-circle-o"></i>  Cadastre-se aqui!</a>
       </div>
     </div>
+    
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+          <%= link_to "Esqueceu sua senha?", new_password_path(resource_name) %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+          <%= link_to "Cadastre-se aqui!",  new_user_registration_path %>
+      </div>
+    </div>
+    
   <% end %>
 </html>

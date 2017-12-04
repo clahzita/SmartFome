@@ -69,7 +69,9 @@
               </div>
               <br>
               <div class="row">
-                <div class="col-md-1"></div>
+                <div class="col-md-1">
+                  
+                </div>
                 <div class="col-md-2">
                   <img class="img-responsive icon-pfl" src="https://icon-icons.com/icons2/622/PNG/128/whatsapp-logo_icon-icons.com_57054.png" width="56" height="56">
                 </div>
@@ -111,9 +113,8 @@
               
               <% if user_signed_in? and current_user.id == @profile.user.id %>
                 <div class="row" style="padding-top: 1rem">
-                  <div class="col-md-3"></div>
-                  <div class="col-md-6">
-                    <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/products/new">Cadastrar um produto</a>
+                  <div class="col-md-12">
+                    <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/products/new">Cadastrar Novo Produto</a>
                   </div>
                 </div>
               <% end %>
@@ -133,6 +134,16 @@
                 </div>
               </div>
               <hr>
+              
+              <% if user_signed_in? and current_user.id == @profile.user.id %>
+                <div class="row" style="padding-top: 1rem">
+                  <div class="col-md-12">
+                    <a class="btn navbar-btn ml-2 text-white btn-secondary" href="/products/new">Cadastrar Nova Promoção</a>
+                  </div>
+                </div>
+              <% end %>
+              
+              
             </div>
           </div>
         </div>

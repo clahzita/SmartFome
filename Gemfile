@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 #  voltado para a realização de upload’s de arquivos
 gem "paperclip", "~> 5.0.0"
+# Translation files for paperclip rubygem
+gem 'paperclip-i18n'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
