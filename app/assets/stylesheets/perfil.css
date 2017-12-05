@@ -82,14 +82,6 @@ Licensed under MIT
   background: #fff;
   min-height: 460px;
 }
-
-#map {
-   width: 100%;
-   height: 400px;
-   background-color: grey;
-   padding: 20px 0 10px 0;
-  
- }
  
 .icon-pfl{
    width: 25px;

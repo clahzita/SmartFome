@@ -21,28 +21,57 @@ Profile.create(business_name: "Pop Steak",
                address: "Rua Halley Mestrinho, Ponta Negra - CEP: 59090-160, Natal/RN.",
                phone: "(84) XXXXX-XXXX",
                popularity: 0,
+               payment_method_ids: ["1", "2", "3"],
                user_id: "1",
-               payment_method_ids: ["1", "2", "3"])
+               image_file_name: "bg01.jpg",
+               image_content_type: "image/jpeg",
+               image_file_size: 28852,
+               image_updated_at: "2017-12-04 03:06:16",
+               latitude: nil,
+               longitude: nil
+               )
 Profile.create(business_name: "BROWNIE MANIA",
                description: "1º Food Truck de Brownie do Brasil,Trabalhamos com grande variedade de brownies, derivados e Waffles.",
                category: "Food Truck",
                address: "Rua Halley Mestrinho, Ponta Negra - CEP: 59090-160, Natal/RN.",
                phone: "(84) XXXXX-XXXX",
                popularity: 0,
+               payment_method_ids: ["1", "2", "3"],
                user_id: "2",
-               payment_method_ids: ["1", "2", "3"])
+               image_file_name: "bg01.jpg",
+               image_content_type: "image/jpeg",
+               image_file_size: 28852,
+               image_updated_at: "2017-12-04 03:06:16",
+               latitude: nil,
+               longitude: nil
+               )
 Profile.create(business_name: "Adoro Massa",
                description: "Food truck especializado em massas italiana.",
                category: "Food Truck", address: "Rua Ataulfo Alves, 1911 - Candelária, Natal/RN.",
                phone: "(84) XXXXX-XXXX",
                popularity: 0,
-               user_id: "3",
-               payment_method_ids: ["1", "2", "3"])
+               payment_method_ids: ["1", "2", "3"],
+               user_id: "4",
+               image_file_name: "bg01.jpg",
+               image_content_type: "image/jpeg",
+               image_file_size: 28852,
+               image_updated_at: "2017-12-04 03:06:16",
+               latitude: nil,
+               longitude: nil
+               )
+               
 Profile.create(business_name: "Mise en Place - Cozinha Gourmet",
                description: "Especialista em tapiocas alegrando o paladar dos nossos clientes",
                category: "Food Truck",
                address: "Av. Antônio Basílio, 2960 - Lagoa Nova, Natal - RN, 59056-500.",
                phone: "(84) XXXXX-XXXX",
                popularity: 0,
+               payment_method_ids: ["1", "2", "3"],
                user_id: "4",
-               payment_method_ids: ["1", "2", "3"])
+               image_file_name: "bg01.jpg",
+               image_content_type: "image/jpeg",
+               image_file_size: 28852,
+               image_updated_at: "2017-12-04 03:06:16",
+               latitude: nil,
+               longitude: nil
+               )

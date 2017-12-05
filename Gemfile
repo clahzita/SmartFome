@@ -38,6 +38,8 @@ gem 'lerolero_generator'
 gem 'geocoder'
 # Enables easy Google map + overlays creation in Ruby apps
 gem 'gmaps4rails'
+#An IRB alternative and runtime developer console
+gem 'pry'
 
 
 
