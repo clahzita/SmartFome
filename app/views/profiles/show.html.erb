@@ -78,9 +78,9 @@
                   <p><%= @profile.phone %></p>
                   <h5>Endereço: </h5>
                   <p><%= @profile.address %></p>
-                      <div id="map-container">
-                        <div id="map"></div>
-                      </div>
+                  <div id="map-container">
+                    <div id="map"></div>
+                  </div>
                       <!-- magica da gem gmaps4rails -->
                       <script>
                       handler = Gmaps.build('Google');
@@ -89,9 +89,9 @@
                         handler.bounds.extendWith(markers);
                         handler.fitMapToBounds();
                       });
-                        
                       </script>
-              </div>
+                  </div>
+            </div>
             </div>
             
             <div role="tabpanel" class="tab-pane fade" id="cardapio">

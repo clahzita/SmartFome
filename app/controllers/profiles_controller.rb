@@ -16,6 +16,7 @@ class ProfilesController < ApplicationController
     @hash = Gmaps4rails.build_markers(@profile) do |profile, marker|
       marker.lat profile.latitude
       marker.lng profile.longitude
+      marker.infowindow profile.description
     end
   end
 
