@@ -65,4 +65,5 @@ Rails.application.routes.draw do
   resources :products, except: [:show, :index]
   
   get '/pages/search' => 'pages#search_index'
+  get '/pages/about_us' => 'pages#about_us'
 end
