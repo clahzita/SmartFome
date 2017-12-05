@@ -69,9 +69,7 @@
               </div>
               <br>
               <div class="row">
-                <div class="col-md-1">
-                  
-                </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-2">
                   <img class="img-responsive icon-pfl" src="https://icon-icons.com/icons2/622/PNG/128/whatsapp-logo_icon-icons.com_57054.png" width="56" height="56">
                 </div>
@@ -80,7 +78,19 @@
                   <p><%= @profile.phone %></p>
                   <h5>Endereço: </h5>
                   <p><%= @profile.address %></p>
-                </div>
+                      <div id="map-container">
+                        <div id="map"></div>
+                      </div>
+                      <!-- magica da gem gmaps4rails -->
+                      <script>
+                      handler = Gmaps.build('Google');
+                      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+                        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+                        handler.bounds.extendWith(markers);
+                        handler.fitMapToBounds();
+                      });
+                        
+                      </script>
               </div>
             </div>
             

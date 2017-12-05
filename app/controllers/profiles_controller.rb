@@ -12,6 +12,11 @@ class ProfilesController < ApplicationController
   def show
     @profile = Profile.find(params[:id])
     @menu = @profile.menu
+    # gmaps4rails
+    @hash = Gmaps4rails.build_markers(@profile) do |profile, marker|
+      marker.lat profile.latitude
+      marker.lng profile.longitude
+    end
   end
 
   # GET /profiles/new
