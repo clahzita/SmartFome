@@ -26,12 +26,6 @@
           </div>
         </div>
         <!-- END SIDEBAR USER TITLE -->
-        <!-- SIDEBAR BUTTONS -->
-        <div class="profile-userbuttons">
-          <button type="button" class="btn btn-primary btn-sm">Follow</button>
-          <button type="button" class="btn btn-secondary btn-sm">Message</button>
-        </div>
-        <!-- END SIDEBAR BUTTONS -->
       </div>
       <!-- END SIDEBAR -->
       </div>
@@ -105,7 +99,7 @@
                   <p><%= product.name %></p>
                 </div>
                 <div class="col-md-2">
-                  <p>R$ <%= product.price %></p>
+                  <p>R$ <%= number_with_precision(product.price, :precision => 2) %></p>
                 </div>
                 <div class="col-md-1">
                   <%= link_to edit_product_path(product), class: "btn" do %>
